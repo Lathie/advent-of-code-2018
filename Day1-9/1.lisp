@@ -19,6 +19,7 @@
       (format t "Finally the answer is ~D." value)
       (setf (gethash value ht) nil)))
 
+;; This shit times out ): Just did some python instead :<1
 (defun advent-one-two (filename)
   (let* ((file (get-file filename))
          (ints (map 'list (lambda (x) (parse-integer x)) file))
